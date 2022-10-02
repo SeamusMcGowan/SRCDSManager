@@ -51,12 +51,6 @@ SRCDS.activeServers = SRCDS.activeServers or {}
 
 local newServerMeta = {
 	connect = function(self, player)
-		SRCDS:writeToSocket({
-			action = "sendlua",
-			id = self.id,
-			lua = "addToWhitelist('"..player:SteamID64().."')"
-		})
-
 		player:SendLua("permissions.AskToConnect('"..self.ip.."')")
 	end,
 	sendLua = function(self,lua)
