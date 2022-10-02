@@ -1,0 +1,3 @@
+{
+	"srcds_path": "C:\\Steam\\steamapps\\common\\GarrysModDS\\srcds.exe"
+}
